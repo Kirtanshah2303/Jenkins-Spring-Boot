@@ -23,8 +23,8 @@ public class StudentService implements StudentInterface{
     }
 
     @Override
-    public String save(StudentEntity req) {
-        return "Student Registered Succesfully";
+    public StudentEntity save(StudentEntity req) {
+        return studentRepo.save(req);
     }
 
     @Override
