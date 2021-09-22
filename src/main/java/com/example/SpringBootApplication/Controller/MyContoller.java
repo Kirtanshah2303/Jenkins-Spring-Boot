@@ -47,6 +47,6 @@ public class MyContoller {
     String deleteStudent(@PathVariable("id") String id){
 
         studentInterface.delete(id);
-        return "Removed" + id;
+        return "Removed  " + id;
     }
 }

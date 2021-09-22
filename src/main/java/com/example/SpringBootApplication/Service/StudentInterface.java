@@ -9,5 +9,5 @@ public interface StudentInterface  {
     List<StudentEntity> getAllStudents();
     Optional<StudentEntity> findStudentByID(String id);
     StudentEntity save(StudentEntity req);
-    String delete(String id);
+    void delete(String id);
 }

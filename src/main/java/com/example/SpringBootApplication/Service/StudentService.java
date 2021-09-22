@@ -30,7 +30,7 @@ public class StudentService implements StudentInterface{
     }
 
     @Override
-    public String delete(String id) {
-        return "Student Deleted.!";
+    public void delete(String id) {
+        studentRepo.deleteById(id);
     }
 }
