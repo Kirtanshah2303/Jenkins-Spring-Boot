@@ -37,13 +37,13 @@ public class MyContoller {
     }
 
     @PostMapping("/register")
-    ResponseEntity<?> postStudent(@Valid @RequestBody StudentDTO body){
+    String addStudent (@Valid @RequestBody StudentDTO body){
         StudentEntity studentEntity = StudentMapper.DtoToStudent(body);
         StudentEntity add = studentInterface.save(studentEntity);
-        URI location = ServletUriComponentsBuilder.fromCurrentRequest()
-                .path("/{id}")
-                .buildAndExpand(add.getId())
-                .toUri();
-        return ResponseEntity.created(location).build();
+//        URI location = ServletUriComponentsBuilder.fromCurrentRequest()
+//                .path("/{id}")
+//                .buildAndExpand(add.getId())
+//                .toUri();
+        return "Entered Success";
     }
 }
