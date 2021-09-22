@@ -9,4 +9,8 @@ public class MyContoller {
     public String Home(){
         return "Hello Friends";
     }
+    @GetMapping("/temp")
+    public String temp(){
+        return "This is for testing of Jenkins";
+    }
 }
